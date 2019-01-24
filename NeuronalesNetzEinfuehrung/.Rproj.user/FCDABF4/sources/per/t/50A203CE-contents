@@ -1,0 +1,35 @@
+---
+title: "NeuronalesNetzinR"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Neuronales Netz Modell in R
+
+## Allgemeines
+
+Ein neuronales Netz (ANN - Artificial Neuronal Network) anhand bestehender Beispiele zu lernen. ein ANN ist ein Informationsverarbeitungsmodell, welches vom biologischem Neuronensystem inspiriert ist. Es besteht aus einer Vielzahl an miteinander verbundenen Verarbeitungselementen, welche als Neuronen bezeichnet werden. Ein neuronales Netz ist ein komplexes adaptives (=> interne Struktur mittels Gewichte und Inputs veränderbar) System. 
+
+Neuronale Netze wurden entwickelt um Problemstellungen zu lösen, welche für Menschen einfach aber für Maschinen schwierig zu lösen sind, zbB. die Erkennung und Klassifizierungen von Bildern. Solch gelagerte Problemstellungen werden als Problem der Mustererkennung ("Pattern Recognition") eingestuft. Anwendungen dazu sind zB optische Zeichenerkennung und Erkennung von Objekten.
+
+##Einführung in neuronale Netze
+Ein Neuron ist eine simple Zelle innerhalb eines neuronalen Netzes(NN) welches einen Input entgegennimmt, diesen verarbeitet und diesen ausgibt. 
+
+Der Algirthmus neuronaler Netze ist inspiriert von der Funktionsweise des menschlichen Gehirns um bestimmte Aufgaben zu erledigen. Ein NN führt Berechnungen mittels Lernprozesse durch. Das neuronale Netz besteht aus verbundenen Ein- und Ausgabeeinheiten, wobei jeder Verbindung eine Gewichtung zugeordnet ist. Während des Lernprozesses lernt das neuroanle Netz durch Anpassung dieser Gewichtungen um zB. die richtige Klassenbezeichnung von EIngabedaten zu ermitteln.
+
+Das menschliche Gehirn besteht aus Milliarden von Nervenzellen, welche Informationen verarbeiten. Jede neuronale Zelle ist ein einfaches Verarbeitungssystem. Ds miteinander verbundene Netz an Neuronen überträgt Informationen mittels elektrischer Signale. Neuronen empfangen Signale anderer Neuronen. Basierend auf diesen Informationen werden erfolgt eine Verarbeitung und dessen Output wird wiederum an andere Neuronen weitergeleitet.
+
+![Biologisches Neuron](./img/Brain_1.png)
+
+Dendriten empfangen Signale von anderen Neuronen. Der Zellenkörper summiert alle Eingangssignale, um eine Ausgabe zu erzeugen. Wenn die Summe der Eingangssignale einen gewissen Schwellenwert erreicht, wird die Ausgabe über das Axon weitergeleitet.Synapsen dienen zur Interaktion von Neuronen. Sie senden elektrische oder chemische Signale an ein anderes Neuron.
+
+Im Vergleich dazu wird folgend ein Neuron eines neuronalen Netzes dargestellt.
+![Neuron](./img/Neuron_2.png)
+
+Hier sind x1,x2,...,xn die Eingangsvariablen  und w1,w2,...,wn sind die Gewichtungen zu den einzelnen Variablen. b ist der Bias welcher gemeinsam mit den Eingängen den Gesamtinput darstellt. Der Bias und die Gewichtungen sind anpassbare Pararmeter des Neurons. Im Zuge des Lernprozesses werden diese Parameter angepasst. Die Ausgabe eines Neurons kann von -inf bis +inf reichen. 
